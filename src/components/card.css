@@ -1,0 +1,16 @@
+@property --border-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.animate-border-rotate {
+    animation: border-rotate 10s linear infinite;
+}
+
+@keyframes border-rotate {
+    to {
+        --border-angle: 360deg;
+    }
+}
+
