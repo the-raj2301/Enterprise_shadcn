@@ -34,21 +34,21 @@ function TextReveal() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-1">
-        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-white md:py-5 px-3">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-1">
+        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-white py-2">
           Elevating style with
         </h1>
-        <div className="flex items-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-white md:py-5">
+        <div className="flex items-center text-4xl md:text-6xl font-bold">
+          <h1 className=" bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-white px-2">
             Glass
           </h1>
           {/* Fixed shifting issue by aligning text to left */}
-          <h1 className="text-4xl md:text-6xl font-bold dark:text-primary md:py-5 md:px-3 min-w-[11ch] text-left inline-block">
+          <h1 className="dark:text-primary lg:min-w-[12ch] text-left inline-block">
             {displayText}
           </h1>
         </div>
       </div>
-      <h2 className="text-primary text-2xl md:text-xl tracking-wide">
+      <h2 className="text-primary text-xl md:text-xl p-2 tracking-wide">
         Innovative glass designs for luxurious interiors
       </h2>
     </>
