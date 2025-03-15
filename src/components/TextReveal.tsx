@@ -35,11 +35,11 @@ function TextReveal() {
   return (
     <>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-1">
-        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-white py-2">
+        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-sky-600 py-2 md:py-4 dark:bg-gradient-to-t dark:from-red-500 dark:to-white">
           Elevating style with
         </h1>
         <div className="flex items-center text-4xl md:text-6xl font-bold">
-          <h1 className=" bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-white px-2">
+          <h1 className=" bg-clip-text text-transparent bg-gradient-to-t from-gray-900 to-sky-600 py-2 md:py-4 dark:bg-gradient-to-t dark:from-red-500 dark:to-white px-2">
             Glass
           </h1>
           {/* Fixed shifting issue by aligning text to left */}

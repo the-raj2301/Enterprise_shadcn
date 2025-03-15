@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { DialogTitle, DialogDescription } from "@/components/ui/dialog"; // Use ShadCN DialogTitle
+// import { Separator } from "./ui/separator";
 
 const navigation = [
   { name: "Home", href: "/Enterprise_shadcn/" },
@@ -21,10 +22,23 @@ export default function Navbar() {
     <nav className="bg-white border-b shadow-sm dark:bg-neutral-900">
       <div className="mx-auto max-w-7xl  sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Logo */}
-        <div className="w-auto flex items-center justify-center">
-          
-          <img src="./img/logo-64-wh.svg" alt="Mantik Enterprises" className="h-12 hidden md:block" />
-          <a className="text-lg font-semibold text-gray-900 dark:text-white px-4 hidden md:block">
+        <div className="w-auto flex items-center justify-center space-x-5">
+          <img
+            src="./img/logo-64-wh.svg"
+            alt="Mantik Enterprises"
+            className="h-12 hidden md:dark:block"
+          />
+          <img
+            src="./img/logo-64-bl.svg"
+            alt="Mantik Enterprises"
+            className="h-12 hidden md:block dark:hidden"
+          />
+
+          {/* Vertical Separator */}
+          <div className="h-12 w-px bg-neutral-900 dark:bg-neutral-200"></div>
+          {/* <Separator orientation="vertical"/> */}
+
+          <a className="text-xl font-semibold text-gray-900 dark:text-white hidden md:block">
             MANTIK ENTERPRISES
           </a>
         </div>
@@ -43,16 +57,25 @@ export default function Navbar() {
         </div>
 
         <div className="absolute md:relative left-2">
-        <ModeToggle />
+          <ModeToggle />
         </div>
-        <img src="./img/logo-xl.png" alt="Mantik Enterprises" className="h-12 left-5 md:hidden bg-clip-text text-transparent bg-red-600" />
+        <img
+          src="./img/logo-xl.png"
+          alt="Mantik Enterprises"
+          className="h-12 left-5 md:hidden hidden md:dark:hidden dark:block"
+        />
+        <img
+          src="./img/logo-xl-bl.png"
+          alt="Mantik Enterprises"
+          className="h-12 left-5 md:hidden dark:hidden"
+        />
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="w-6 h-6" />
+                <Menu className="w-8 h-8" />
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-64">

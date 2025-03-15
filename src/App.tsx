@@ -1,5 +1,7 @@
 import './App.css'
 import Card from './components/card'
+import Footer from './components/footer'
+import MiniCard from './components/mini-card'
 // import { ModeToggle } from './components/mode-toggle'
 import Navbar from './components/Navbar'
 import { ThemeProvider } from './components/theme-provider'
@@ -12,7 +14,9 @@ function App() {
       <div className="absolute right-2 top-2">
         {/* <ModeToggle /> */}
       </div>
-      <Card/>  
+      <Card/>
+      <MiniCard/>
+      <Footer /> 
     </ThemeProvider>
   )
 }
