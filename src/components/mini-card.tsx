@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import "./card.css";
 
 interface CardProps {
   title: string;
@@ -9,15 +10,28 @@ interface CardProps {
 
 const EnhancedCard = ({ image, title, subTitle }: CardProps) => {
   return (
-    <Card className="overflow-hidden border-none transition-all bg-gradient-to-r from-cyan-500 to-blue-500 p-[2px] hover:shadow-[0_0_30px_#00ffff] h-[350px] group">
-      <CardContent className="bg-white dark:bg-neutral-950 rounded-lg p-6 dark:text-white h-full flex flex-col justify-between">
-        <h1 className="text-4xl font-bold py-2">{title}</h1>
-        <AspectRatio ratio={16 / 9} className="rounded-sm overflow-hidden mb-4">
-          <img src={image} alt={title} className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-130 md:brightness-50 group-hover:brightness-90" loading="lazy" />
-        </AspectRatio>
-        <p className="text-sm text-gray-600 dark:text-gray-300">{subTitle}</p>
-      </CardContent>
-    </Card>
+    <div className="overflow-hidden relative rounded-lg dark:bg-neutral-900 bg-white glow-on-hover animate-border-hoverShift ">
+      <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-500 animate-border-colorShift rounded-lg z-0"></div>
+      <Card className="relative rounded-lg m-px z-10">
+        <CardContent className="p-6 dark:text-white h-full flex flex-col justify-between">
+          <h1 className="text-4xl font-bold py-2">{title}</h1>
+          <AspectRatio
+            ratio={16 / 9}
+            className="rounded-sm overflow-hidden mb-4"
+          >
+            <img
+              src={image}
+              alt={title}
+              className="object-cover w-full h-full transition-transform duration-300 scale-105 md:brightness-95 brightness-90"
+              loading="lazy"
+            />
+          </AspectRatio>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            {subTitle}
+          </p>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 
