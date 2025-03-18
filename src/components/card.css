@@ -4,6 +4,16 @@
     initial-value: 0deg;
 }
 
+@keyframes border-rotate {
+  to {
+      --border-angle: 360deg;
+  }
+}
+
+.animate-border-rotate {
+  animation: border-rotate 10s infinite linear;
+}
+
 /* Animation for color shift */
 @keyframes hoverShift {
     0%, 100% {
@@ -24,7 +34,7 @@
   }
   
   .animate-border-hoverShift {
-    animation: hoverShift 20s infinite ease-in-out;
+    animation: hoverShift 20s infinite linear;
   }
   
   .glow-on-hover {
@@ -36,17 +46,7 @@
   }
   
 
-@keyframes border-rotate {
-    to {
-        --border-angle: 360deg;
-    }
-}
-
-@property --border-line {
-    syntax: '<length>';
-    inherits: false;
-    initial-value: 0px;
-}
+/* Animation for border color shift */
 
 @keyframes colorShift {
     0%, 100% {
@@ -67,7 +67,7 @@
   }
 
   .animate-border-colorShift {
-    animation: colorShift 20s infinite ease-in-out;
+    animation: colorShift 20s infinite linear;
   }
 
 

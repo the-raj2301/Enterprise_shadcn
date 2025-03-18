@@ -10,8 +10,8 @@ interface CardProps {
 
 const EnhancedCard = ({ image, title, subTitle }: CardProps) => {
   return (
-    <div className="overflow-hidden relative rounded-lg dark:bg-neutral-900 bg-white glow-on-hover animate-border-hoverShift ">
-      <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-500 animate-border-colorShift rounded-lg z-0"></div>
+    <div className="overflow-hidden relative rounded-lg dark:bg-neutral-900 bg-white glow-on-hover animate-border-hoverShift group">
+      <div className="absolute inset-0 animate-border-colorShift rounded-lg z-0"></div>
       <Card className="relative rounded-lg m-px z-10">
         <CardContent className="p-6 dark:text-white h-full flex flex-col justify-between">
           <h1 className="text-4xl font-bold py-2">{title}</h1>
@@ -22,7 +22,7 @@ const EnhancedCard = ({ image, title, subTitle }: CardProps) => {
             <img
               src={image}
               alt={title}
-              className="object-cover w-full h-full transition-transform duration-300 scale-105 md:brightness-95 brightness-90"
+              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-135"
               loading="lazy"
             />
           </AspectRatio>
@@ -38,7 +38,7 @@ const EnhancedCard = ({ image, title, subTitle }: CardProps) => {
 function MiniCard() {
   return (
     <div className="w-full max-w-7xl m-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 items-center justify-center mb-8 p-4 lg:p-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 items-center justify-center mb-8 p-4 lg:p-0 gap-8">
         <EnhancedCard
           image="./img/eng.png"
           title="Engraving"

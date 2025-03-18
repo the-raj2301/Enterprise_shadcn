@@ -3,7 +3,7 @@ import { Separator } from "./ui/separator";
 
 function Footer() {
   return (
-    <footer className="w-full bottom-0 bg-background">
+    <footer className="w-full bottom-0 bg-transparent">
       {/* <div className="absolute -z-50 w-full m-auto items-center bg-[url(./img/bg2.jpg)] bg-cover bg-center overflow-hidden">
       </div> */}
       <div className="mx-auto max-w-7xl pt-10 border-t flex flex-col items-center space-y-4">

@@ -5,6 +5,7 @@ import MiniCard from './components/mini-card'
 // import { ModeToggle } from './components/mode-toggle'
 import Navbar from './components/Navbar'
 import ParticleBackground from './components/ParticleBackground'
+import Swiper from './components/Swiper'
 import { ThemeProvider } from './components/theme-provider'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Navbar/>
         <Card/>
         <MiniCard/>
+        <Swiper/>
         <Footer /> 
       </div>
     </ThemeProvider>
