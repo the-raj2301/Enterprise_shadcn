@@ -1,6 +1,7 @@
 import './App.css'
 import Card from './components/card'
 import Footer from './components/footer'
+import Gallery from './components/gallery'
 import MiniCard from './components/mini-card'
 // import { ModeToggle } from './components/mode-toggle'
 import Navbar from './components/Navbar'
@@ -20,6 +21,7 @@ function App() {
         <Card/>
         <MiniCard/>
         <Swiper/>
+        <Gallery/>
         <Footer /> 
       </div>
     </ThemeProvider>
