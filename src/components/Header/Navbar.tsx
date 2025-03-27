@@ -4,15 +4,23 @@ import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "../BgThemes/mode-toggle";
 import { DialogTitle, DialogDescription } from "@/components/ui/dialog"; // Use ShadCN DialogTitle
+import { NavLink } from "react-router-dom";
+
+import logoLight from "@/assets/logo-64-wh.svg";
+import logoDark from "@/assets/logo-64-bl.svg";
+import logoXlLight from "@/assets/logo-xl.png";
+import logoXlDark from "@/assets/logo-xl-bl.png";
+
 // import { Separator } from "./ui/separator";
 
 const navigation = [
-  { name: "Home", href: "/Enterprise_shadcn/" },
-  { name: "About", href: "/Enterprise_shadcn/" },
-  { name: "Services", href: "/Enterprise_shadcn/" },
-  { name: "Contact", href: "/Enterprise_shadcn/" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Gallary", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -24,12 +32,12 @@ export default function Navbar() {
         {/* Logo */}
         <div className="w-auto flex items-center justify-center space-x-5">
           <img
-            src="./img/logo-64-wh.svg"
+            src={logoLight}
             alt="Mantik Enterprises"
             className="h-12 hidden md:dark:block"
           />
           <img
-            src="./img/logo-64-bl.svg"
+            src={logoDark}
             alt="Mantik Enterprises"
             className="h-12 hidden md:block dark:hidden"
           />
@@ -46,13 +54,17 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
           {navigation.map((item) => (
-            <a
+            <NavLink
               key={item.name}
-              href={item.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              to={item.href}
+              className={({ isActive }) =>
+                `text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white ${
+                  isActive ? "text-orange-700 dark:text-orange-400" : ""
+                }`
+              }
             >
               {item.name}
-            </a>
+            </NavLink>
           ))}
         </div>
 
@@ -60,12 +72,12 @@ export default function Navbar() {
           <ModeToggle />
         </div>
         <img
-          src="./img/logo-xl.png"
+          src={logoXlLight}
           alt="Mantik Enterprises"
           className="h-12 left-5 md:hidden hidden md:dark:hidden dark:block"
         />
         <img
-          src="./img/logo-xl-bl.png"
+          src={logoXlDark}
           alt="Mantik Enterprises"
           className="h-12 left-5 md:hidden dark:hidden"
         />
@@ -89,13 +101,16 @@ export default function Navbar() {
 
               <div className="space-y-4 mt-4">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                    to={item.href}
+                    className={({isActive})=> `
+                      block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md
+                      ${isActive ? "text-orange-700 dark:text-orange-400" : ""}
+                      `}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
             </SheetContent>

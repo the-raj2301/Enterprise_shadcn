@@ -2,6 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import "./card.css";
 
+import Engraving from "@/assets/eng.png";
+import Lamination from "@/assets/lam3.jpeg";
+import Frosting from "@/assets/Frost.jpg";
+
+
 interface CardProps {
   title: string;
   subTitle: string;
@@ -40,17 +45,17 @@ function MiniCard() {
     <div className="w-full max-w-7xl m-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 items-center justify-center mb-8 p-4 lg:p-0 gap-8">
         <EnhancedCard
-          image="./img/eng.png"
+          image={Engraving}
           title="Engraving"
           subTitle="We do high quality CNC Engraving Designs and customized patterns for glass, mirrors."
         />
         <EnhancedCard
-          image="./img/lam2.jpeg"
+          image={Lamination}
           title="Lamination"
           subTitle="We offer premium lamination services for durability and aesthetics"
         />
         <EnhancedCard
-          image="./img/text.jpg"
+          image={Frosting}
           title="Frosting"
           subTitle="Add privacy and elegance with our expert frosting techniques"
         />

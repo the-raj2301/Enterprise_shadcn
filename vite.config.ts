@@ -11,5 +11,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/Enterprise_shadcn/",
+  base: "/Enterprise_shadcn",
 })

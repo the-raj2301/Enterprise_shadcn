@@ -1,19 +1,17 @@
 import { useCallback } from "react";
 import { useTheme } from "./theme-provider";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
 const ParticleBackground = () => {
   const { theme } = useTheme();
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async () => {}, []);
+
 
   const isDarkMode = theme === "dark";
 

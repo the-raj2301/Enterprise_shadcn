@@ -1,5 +1,7 @@
-import { ModeToggle } from "./mode-toggle";
-import { Separator } from "./ui/separator";
+import { ModeToggle } from "../BgThemes/mode-toggle";
+import { Separator } from "../ui/separator";
+import logoXlLight from "@/assets/logo-xl.png";
+import logoXlDark from "@/assets/logo-xl-bl.png";
 
 function Footer() {
   return (
@@ -14,12 +16,12 @@ function Footer() {
           <div className="md:w-1/3 w-full space-y-4">
             <div className="flex items-center justify-between">
               <img
-                src="./img/logo-xl.png"
+                src={logoXlLight}
                 alt="Mantik Enterprises"
                 className="h-12 hidden dark:block"
               />
               <img
-                src="./img/logo-xl-bl.png"
+                src={logoXlDark}
                 alt="Mantik Enterprises"
                 className="h-12 dark:hidden"
               />

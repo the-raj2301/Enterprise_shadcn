@@ -5,9 +5,16 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel";
+} from "../ui/carousel";
 
-const images = ["./img/1.jpg", "./img/2.jpg", "./img/3.jpg", "./img/4.jpg"];
+
+import SlideA from "@/assets/1.jpg";
+import SlideB from "@/assets/2.jpg";
+import SlideC from "@/assets/3.jpg";
+import SlideD from "@/assets/4.jpg";
+
+
+const images = [SlideA, SlideB, SlideC, SlideD];
 
 const Swiper = () => {
   return (
