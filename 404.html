@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Redirect to index.html for React Router handling
-        window.location.replace("/Enterprise_shadcn" + window.location.pathname + window.location.search);
+        (function() {
+            const basePath = "/Enterprise_shadcn";
+            const currentPath = window.location.pathname;
+
+            // Avoid multiple basePath additions
+            if (!currentPath.startsWith(basePath + basePath)) {
+                window.location.replace(basePath + currentPath + window.location.search);
+            } else {
+                window.location.replace(basePath);
+            }
+        })();
     </script>
 </head>
 <body>
