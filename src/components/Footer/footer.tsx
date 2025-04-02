@@ -2,6 +2,7 @@ import { ModeToggle } from "../BgThemes/mode-toggle";
 import { Separator } from "../ui/separator";
 import logoXlLight from "@/assets/logo-xl.png";
 import logoXlDark from "@/assets/logo-xl-bl.png";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -43,16 +44,19 @@ function Footer() {
             <div className="text-neutral-600 dark:text-neutral-400">
               <ul className="space-y-2">
                 <li className="hover:text-primary">
-                  <a href="#">Home</a>
+                  <NavLink to="/">Home</NavLink>
                 </li>
                 <li className="hover:text-primary">
-                  <a href="#">About</a>
+                  <NavLink to="/about">About</NavLink>
                 </li>
                 <li className="hover:text-primary">
-                  <a href="#">Services</a>
+                  <NavLink to="/services">Services</NavLink>
                 </li>
                 <li className="hover:text-primary">
-                  <a href="#">Contact</a>
+                  <NavLink to="/gallery">Gallery</NavLink>
+                </li>
+                <li className="hover:text-primary">
+                  <NavLink to="/contact">Contact</NavLink>
                 </li>
               </ul>
             </div>
