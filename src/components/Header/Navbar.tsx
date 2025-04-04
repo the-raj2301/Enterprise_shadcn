@@ -104,6 +104,7 @@ export default function Navbar() {
                   <NavLink
                     key={item.name}
                     to={item.href}
+                    onClick={() => setIsOpen(false)}
                     className={({isActive})=> `
                       block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md
                       ${isActive ? "text-orange-700 dark:text-orange-400" : ""}

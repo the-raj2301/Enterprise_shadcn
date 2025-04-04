@@ -10,10 +10,13 @@ import { Outlet } from "react-router-dom";
 import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
+import { Toaster } from "./components/ui/sonner";
 
 function Layout() {
-  return (
+
+  return (  
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Toaster richColors position="top-right"/>
       <div className="h-screen w-full relative">
         <ParticleBackground />
       </div>

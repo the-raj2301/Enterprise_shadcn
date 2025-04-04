@@ -1,7 +1,10 @@
 import Card from "../Home/card";
+import PageIdentifier from "../Home/page_identifier";
 
 const About = () => {
   return (
+    <>
+    <PageIdentifier title="About" tab_link="/about" />
     <div className="max-w-7xl mx-auto justify-center items-center">
       <Card />
       <div className="w-full flex justify-center items-center">
@@ -10,6 +13,7 @@ const About = () => {
         </h1>
       </div>
     </div>
+    </>
   );
 };
 

@@ -2,7 +2,11 @@
 
 @plugin "tailwindcss-animate";
 
+@tailwind utilities;
+
+
 @custom-variant dark (&:is(.dark *));
+
 
 :root {
   --background: oklch(1 0 0);

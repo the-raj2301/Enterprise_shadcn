@@ -5,6 +5,15 @@ import logoXlDark from "@/assets/logo-xl-bl.png";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
+
+  const navigation = [
+    {name: "Home", href:"/"},
+    {name: "About", href:"/about"},
+    {name: "Services", href:"/services"},
+    {name: "Gallery", href:"/gallery"},
+    {name: "Contact Us", href:"/contact"},
+  ]
+
   return (
     <footer className="w-full bottom-0 bg-transparent">
       {/* <div className="absolute -z-50 w-full m-auto items-center bg-[url(./img/bg2.jpg)] bg-cover bg-center overflow-hidden">
@@ -43,21 +52,16 @@ function Footer() {
             <h4 className="text-lg  font-semibold pb-4 tracking-widest">Usefull Links</h4>
             <div className="text-neutral-600 dark:text-neutral-400">
               <ul className="space-y-2">
-                <li className="hover:text-primary">
-                  <NavLink to="/">Home</NavLink>
-                </li>
-                <li className="hover:text-primary">
-                  <NavLink to="/about">About</NavLink>
-                </li>
-                <li className="hover:text-primary">
-                  <NavLink to="/services">Services</NavLink>
-                </li>
-                <li className="hover:text-primary">
-                  <NavLink to="/gallery">Gallery</NavLink>
-                </li>
-                <li className="hover:text-primary">
-                  <NavLink to="/contact">Contact</NavLink>
-                </li>
+                  {navigation.map((item) => (
+                      <li key={item.name}>
+                        <NavLink to={item.href} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className={({ isActive }) =>
+                          `text-neutral-600 dark:text-neutral-400 hover:text-primary ${
+                            isActive ? "text-orange-500 dark:text-orange-400" : ""
+                        }`}>
+                          {item.name}
+                        </NavLink> 
+                      </li>
+                    ))}
               </ul>
             </div>
           </div>
@@ -69,10 +73,10 @@ function Footer() {
             <div className="text-neutral-600 dark:text-neutral-400">
               <ul className="space-y-2">
                 <li>
-                  Email: <a href="mailto:the.raj2301@gmail.com" className="hover:text-primary">the.raj2301@gmail.com</a>
+                  Email: <a href="mailto:the.raj2301@gmail.com" className="active:text-primary hover:text-primary">the.raj2301@gmail.com</a>
                 </li>
                 <li>
-                  Phone: <a href="tel:+917738339185" className="hover:text-primary">+91 77383 39185</a>
+                  Phone: <a href="tel:+917738339185" className="active:text-primary hover:text-primary">+91 77383 39185</a>
                 </li>
                 <li>
                   Adress: 
@@ -92,7 +96,7 @@ function Footer() {
             <p>
             Designed By: 
             </p>
-            <a href="https://www.instagram.com/the.raj2301/" target="_blank" className="hover:text-chart-2">the.raj2301</a>
+            <a href="https://www.instagram.com/the.raj2301/" target="_blank" className="hover:text-chart-2 focus:text-chart-2">the.raj2301</a>
           </div>
         </div>
       </div>

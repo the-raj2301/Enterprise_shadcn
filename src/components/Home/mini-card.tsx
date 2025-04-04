@@ -27,7 +27,7 @@ const EnhancedCard = ({ image, title, subTitle }: CardProps) => {
             <img
               src={image}
               alt={title}
-              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-135"
+              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-135 group-active:scale-135"
               loading="lazy"
             />
           </AspectRatio>

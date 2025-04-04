@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import PageIdentifier from "../Home/page_identifier";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -56,31 +63,38 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto ">
-      <h1 className="text-8xl font-bold text-center py-2 pb-10">Gallery</h1>
-      <div className="columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4">
-        {images.map((image, index) => (
-          <Dialog key={index}>
-            <DialogTrigger onClick={() => setSelectedImage(image.src)}>
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full hover:scale-105 hover:brightness-50 transition-all  cursor-pointer"
-                loading="lazy"
-              />
-            </DialogTrigger>
-            <DialogContent className="bg-transparent p-0">
-              <DialogTitle className="sr-only">Expanded Image</DialogTitle>
-              <DialogDescription className="sr-only">
-                A full-size view of the selected image.
-              </DialogDescription>
-              <img src={selectedImage ?? ""} alt="Selected" className="w-full" />
-            </DialogContent>
-          </Dialog>
-        ))}
+    <>
+      {/* <h1 className="text-8xl font-bold text-center py-2 pb-10">Gallery</h1> */}
+      <PageIdentifier title="Gallery" tab_link="/gallery" />
+      <div className="max-w-7xl mx-auto pt-8">
+        <div className="columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4">
+          {images.map((image, index) => (
+            <Dialog key={index}>
+              <DialogTrigger onClick={() => setSelectedImage(image.src)}>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full hover:scale-105 hover:brightness-50 transition-all  cursor-pointer"
+                  loading="lazy"
+                />
+              </DialogTrigger>
+              <DialogContent className="bg-transparent p-0">
+                <DialogTitle className="sr-only">Expanded Image</DialogTitle>
+                <DialogDescription className="sr-only">
+                  A full-size view of the selected image.
+                </DialogDescription>
+                <img
+                  src={selectedImage ?? ""}
+                  alt="Selected"
+                  className="w-full"
+                />
+              </DialogContent>
+            </Dialog>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default Gallery;
