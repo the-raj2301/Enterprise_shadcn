@@ -136,9 +136,9 @@ const Contact = () => {
             </div>
 
             <div className="flex gap-2">
-              <div className="text-lg pt-2">
-                <LuMailPlus />
-              </div>
+                <div className="text-lg pt-2">
+                  <LuMailPlus />
+                </div>
               <a
                 className="text-lg tracking-normal"
                 href="mailto:mantikenterprises24@gmail.com"
