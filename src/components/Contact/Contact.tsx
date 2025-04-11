@@ -178,7 +178,7 @@ const Contact = () => {
                         <FormItem>
                           <FormLabel>First Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="First Name" {...field} />
+                            <Input placeholder="First Name" type="" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -194,7 +194,7 @@ const Contact = () => {
                         <FormItem>
                           <FormLabel>Last Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Last Name" {...field} />
+                            <Input placeholder="Last Name"  {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -210,7 +210,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Email" {...field} />
+                        <Input placeholder="Your Email" type="email" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -223,7 +223,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="Phone Number" {...field} />
+                        <Input placeholder="Phone Number" type="tel" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
