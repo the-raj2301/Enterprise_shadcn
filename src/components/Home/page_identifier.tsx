@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import header_pic from "@/assets/contact.jpg"
+import header_pic from "@/assets/mantik/contact.jpg"
 
 interface PageIdentifierProps{
     title: string;

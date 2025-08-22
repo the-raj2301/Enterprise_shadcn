@@ -7,7 +7,7 @@ import { LiaFileInvoiceSolid } from "react-icons/lia";
 
 import PageIdentifier from "../Home/page_identifier";
 
-import aboutImage from "@/assets/about.jpg";
+import aboutImage from "@/assets/mantik/about.jpg";
 import { NavLink } from "react-router-dom";
 
 const About = () => {

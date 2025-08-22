@@ -8,10 +8,10 @@ import { ModeToggle } from "../BgThemes/mode-toggle";
 import { DialogTitle, DialogDescription } from "@/components/ui/dialog"; // Use ShadCN DialogTitle
 import { NavLink } from "react-router-dom";
 
-import logoLight from "@/assets/logo-64-wh.svg";
-import logoDark from "@/assets/logo-64-bl.svg";
-import logoXlLight from "@/assets/logo-xl.png";
-import logoXlDark from "@/assets/logo-xl-bl.png";
+import logoLight from "@/assets/mantik/logo-64-wh.svg";
+import logoDark from "@/assets/mantik/logo-64-bl.svg";
+import logoXlLight from "@/assets/mantik/logo-xl.png";
+import logoXlDark from "@/assets/mantik/logo-xl-bl.png";
 
 // import { Separator } from "./ui/separator";
 

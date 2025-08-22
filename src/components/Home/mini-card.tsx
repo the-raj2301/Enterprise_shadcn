@@ -2,9 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import "./card.css";
 
-import Engraving from "@/assets/eng.png";
-import Lamination from "@/assets/lam3.jpeg";
-import Frosting from "@/assets/Frost.jpg";
+import Engraving from "@/assets/mantik/eng.png";
+import Lamination from "@/assets/mantik/lam3.jpeg";
+import Frosting from "@/assets/mantik/Frost.jpg";
 
 
 interface CardProps {

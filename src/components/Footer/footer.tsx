@@ -1,7 +1,7 @@
 import { ModeToggle } from "../BgThemes/mode-toggle";
 import { Separator } from "../ui/separator";
-import logoXlLight from "@/assets/logo-xl.png";
-import logoXlDark from "@/assets/logo-xl-bl.png";
+import logoXlLight from "@/assets/mantik/logo-xl.png";
+import logoXlDark from "@/assets/mantik/logo-xl-bl.png";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
