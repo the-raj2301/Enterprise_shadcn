@@ -10,6 +10,10 @@ import PageIdentifier from "../Home/page_identifier";
 import aboutImage from "@/assets/mantik/about.jpg";
 import { NavLink } from "react-router-dom";
 
+import quality from "@/assets/images/service.png"
+import team from "@/assets/images/team-leader.png"
+import customer from "@/assets/images/luxury.png"
+
 const About = () => {
   return (
     <>
@@ -71,7 +75,7 @@ const About = () => {
         </section>
 
         {/* Mission & Vision */}
-        <section className="bg-slate-500 dark:bg-orange-500 ">
+        <section className="bg-slate-500 dark:bg-[#30BFBF] ">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2">
             {/* Mission */}
             <div className="p-12 md:p-28 md:bg-background">
@@ -121,8 +125,9 @@ const About = () => {
             Why Choose Us?
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="py-32 px-6 bg-slate-500 dark:bg-orange-500 rounded-2xl shadow">
-              <h3 className="text-xl font-semibold mb-2 text-background">
+            <div className="py-20 px-6 bg-slate-500 dark:bg-[#30BFBF] rounded-2xl shadow">
+              <img src={quality} alt="Quality"  className="w-36 m-auto"/>
+              <h3 className="text-2xl font-semibold mb-2 text-background">
                 Quality Assurance
               </h3>
               <p className="text-secondary">
@@ -130,8 +135,9 @@ const About = () => {
                 standards across all our products.
               </p>
             </div>
-            <div className="py-32 px-6 bg-slate-500 dark:bg-orange-500 rounded-2xl shadow">
-              <h3 className="text-xl font-semibold mb-2 text-background">
+            <div className="py-20 px-6 bg-slate-500 dark:bg-[#30BFBF] rounded-2xl shadow">
+              <img src={team} alt="Quality"  className="w-36 m-auto"/>
+              <h3 className="text-2xl font-semibold mb-2 text-background">
                 Experienced Team
               </h3>
               <p className="text-secondary">
@@ -139,8 +145,9 @@ const About = () => {
                 design, cutting, installation, and finishing.
               </p>
             </div>
-            <div className="py-32 px-6 bg-slate-500 dark:bg-orange-500 rounded-2xl shadow">
-              <h3 className="text-xl font-semibold mb-2 text-background">
+            <div className="py-20 px-6 bg-slate-500 dark:bg-[#30BFBF] rounded-2xl shadow">
+              <img src={customer} alt="Quality"  className="w-36 m-auto"/>
+              <h3 className="text-2xl font-semibold mb-2 text-background">
                 Customer First
               </h3>
               <p className="text-secondary">
@@ -152,9 +159,9 @@ const About = () => {
         </section>
 
         {/* Have a Project to Discuss? */}
-        <section className="bg-slate-500 dark:bg-orange-500">
+        <section className="bg-slate-500 dark:bg-[#30BFBF]">
         <div className="max-w-7xl mx-auto px-4 py-32">
-          <h2 className="text-5xl font-bold text-center mb-28">
+          <h2 className="text-5xl font-bold text-center mb-28 ">
             Have a Project to Discuss?
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">

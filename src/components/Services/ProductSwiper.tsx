@@ -44,7 +44,7 @@ const ProductSwiper = () => {
         <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 left-3 z-10" />
         <CarouselContent>
           {images.map((img, index) => (
-            <CarouselItem key={index} className="basis-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+            <CarouselItem key={index} className="basis-1 sm:basis-1/2 md:basis-1/4 lg:basis-1/5">
               <img
                 className="mx-auto w-full"
                 src={img}

@@ -96,7 +96,7 @@ function Footer() {
             <p>
             Designed By: 
             </p>
-            <a href="https://www.instagram.com/the.raj2301/" target="_blank" className="hover:text-chart-2 focus:text-chart-2">the.raj2301</a>
+            <a href="https://www.instagram.com/the.raj2301/" target="_blank" className="text-[#DB3358] hover:text-chart-2 focus:text-chart-2">the.raj2301</a>
           </div>
         </div>
       </div>
